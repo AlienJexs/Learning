@@ -1,4 +1,4 @@
-﻿/*
+/*
  * C# Program to Perform a Number Guessing Game
  */
 using System;
@@ -10,7 +10,7 @@ class Program
     {
         while (true)
         {
-            int randno = (1, 101);
+            int randno = Newnum(1, 101);
             int count = 1;
             while (true)
             {
@@ -40,5 +40,11 @@ class Program
                 }
             }
         }
+
+    }
+    static int Newnum(int min, int max)
+    {
+        Random random = new Random();
+        return random.Next(min, max);
     }
 }
